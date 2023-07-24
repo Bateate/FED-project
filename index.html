@@ -8,11 +8,76 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./src/css/base.css" />
     <link rel="stylesheet" href="./src/css/calendar.css" />
-    <script defer type="module" src="src/js/controller.js"></script>
+    <link rel="stylesheet" href="./src/css/auto-complete.css" />
+    <link rel="stylesheet" href="./src/css/event.css" />
   </head>
   <body>
-    <div class="content">
-      <div class="calendar"></div>
+    <header>
+      <div class="search-input">
+        <input type="text" placeholder="Type to search.." />
+        <div class="autocom-box">123123</div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </header>
+    <div id="container">
+      <div id="content">
+        <div id="calendar">
+          <div id="header">
+            <div id="monthDisplay"></div>
+            <div>
+              <button id="backButton">Back</button>
+              <button id="nextButton">Next</button>
+            </div>
+          </div>
+          <div id="weekdays">
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+          </div>
+          <div id="calendarDays"></div>
+        </div>
+        <div id="newEventModal">
+          <h2>New Event</h2>
+          <div id="details">
+            <h2>Title:</h2>
+            <input id="eventTitleInput" placeholder="Event Title" />
+            <h2>Time:</h2>
+            <div id="newEventTime"></div>
+            <h2>Participants:</h2>
+            <textarea id="newParticipants" class="textarea"></textarea>
+            <h2>Details:</h2>
+            <textarea id="newDetail" class="textarea"></textarea>
+          </div>
+          <div id="newEventModalFooter">
+            <button id="cancelButton">Cancel</button>
+            <button id="saveButton">Save</button>
+          </div>
+        </div>
+
+        <div id="deleteEventModal">
+          <h1 id="eventTitle"></h1>
+          <div id="eventTime"></div>
+          <div id="eventParticipants"></div>
+          <div id="eventDetails"></div>
+
+          <div id="newEventModalFooter">
+            <button id="closeButton">Close</button>
+            <button id="deleteButton">Delete</button>
+          </div>
+        </div>
+
+        <div id="modalBackDrop"></div>
+      </div>
     </div>
+    <script defer type="module" src="src/js/controller.js"></script>
+    <script
+      defer
+      type="module"
+      src="src/js/view/inputAutoCompleteView.js"
+    ></script>
   </body>
 </html>
