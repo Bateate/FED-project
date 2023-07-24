@@ -31,8 +31,6 @@ inputBox.onkeyup = (e) => {
 };
 
 function select(element) {
-  // let selectData = element.srcElement.innerHTML;
-  // inputBox.value = selectData;
   openModalView(element);
 }
 

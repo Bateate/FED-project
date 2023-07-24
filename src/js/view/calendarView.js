@@ -20,7 +20,6 @@ class CalendarView {
     if (nav !== 0) {
       dt.setMonth(new Date().getMonth() + nav);
     }
-    console.log("123");
 
     const day = dt.getDate();
     const month = dt.getMonth();
@@ -46,7 +45,6 @@ class CalendarView {
     days.innerHTML = ``;
     let weekDiv = document.createElement("div");
     weekDiv.classList.add("week-row");
-    // weekDiv.innerHTML = ``;
     for (let i = 1; i <= placesInCalendar; i++) {
       const daySquare = document.createElement("div");
       daySquare.classList.add("day");
@@ -75,7 +73,6 @@ class CalendarView {
       } else {
         daySquare.classList.add("padding");
       }
-      // days.appendChild(daySquare);
       if (dayOfTheWeek > 0) {
         weekDiv.appendChild(daySquare);
       } else {

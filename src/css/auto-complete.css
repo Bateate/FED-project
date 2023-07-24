@@ -20,7 +20,6 @@
 .search-input input {
   margin-top: 15px;
   height: 55px;
-  /* width: 100%; */
   outline: none;
   border: none;
   border-radius: 5px;
@@ -31,7 +30,6 @@
 
 .search-input.active input {
   border-radius: 5px 5px 0 0;
-  /* position: absolute; */
 }
 
 .search-input .autocom-box {
@@ -52,11 +50,9 @@
 .autocom-box li {
   list-style: none;
   padding: 8px 12px;
-  /* display: none; */
   width: 100%;
   cursor: default;
   border-radius: 3px;
-  z-index: -1;
 }
 
 .search-input.active .autocom-box li {
