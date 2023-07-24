@@ -33,6 +33,7 @@ export function initButtons() {
     .getElementById("closeButton")
     .addEventListener("click", eventModalView.closeModal);
 }
+export function validateKeyStrokes(e) {}
 
 initButtons();
 load();

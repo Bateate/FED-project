@@ -7,6 +7,13 @@ const suggBox = searchWrapper.querySelector(".autocom-box");
 let events = localStorage.getItem("events")
   ? JSON.parse(localStorage.getItem("events")).map((e) => e.title)
   : suggestions;
+inputBox.addEventListener("onkeypress", (e) => {
+  var charCode = e.which ? e.which : e.keyCode;
+  console.log("1");
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    return false;
+  }
+});
 inputBox.onkeyup = (e) => {
   let userData = e.target.value;
   let emptyArray = [];

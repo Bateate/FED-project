@@ -63,7 +63,19 @@ class CalendarView {
         if (eventForDay) {
           const eventDiv = document.createElement("div");
           eventDiv.classList.add("event");
-          eventDiv.innerText = eventForDay.title;
+          let title = document.createElement("h3");
+          title.innerText = eventForDay.title;
+          eventDiv.appendChild(title);
+          let time = document.createElement("div");
+          time.innerText = eventForDay.time;
+          eventDiv.appendChild(time);
+          let participants = document.createElement("div");
+          participants.innerText = eventForDay.participants;
+          eventDiv.appendChild(participants);
+          let detail = document.createElement("div");
+          detail.innerText = eventForDay.detail;
+          eventDiv.appendChild(detail);
+          // eventDiv.innerText = eventForDay.title;
           daySquare.appendChild(eventDiv);
         }
 
